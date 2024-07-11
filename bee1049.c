@@ -3,15 +3,7 @@
 #include <string.h> 
  
 int main() {
-    char* s1 = malloc(10*sizeof(char));
-    char* s2 = malloc(10*sizeof(char));
-    char* s3 = malloc(10*sizeof(char));
-    if(s1==NULL || s2==NULL || s3==NULL){
-        free(s1);
-        free(s2);
-        free(s3);
-        return 1;
-    }
+    char s1[11], s2[11], s3[11];
     scanf("%s %s %s", s1, s2, s3);
 
     if(strcmp(s1, "vertebrado") == 0){
