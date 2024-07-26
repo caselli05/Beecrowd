@@ -38,9 +38,5 @@ int toOneDigit(int number){
         tmp /= 10;
     }
     number += tmp;
-    // if(number < 10){
-    //     return number;
-    // }
-    // return toOneDigit(number);
     return number;
 }
