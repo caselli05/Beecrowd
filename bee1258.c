@@ -51,22 +51,22 @@ int main() {
 
 void sort(Shirts* shirt, int n){
     for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
+        for(int j = i+1; j < n; j++){
             if(strcmp(shirt[i].color, shirt[j].color) != 0){
-                if(strcmp(shirt[i].color, "branco") == 0){
+                if(strcmp(shirt[j].color, "branco") == 0){
                     Shirts tmp = shirt[i];
                     shirt[i] = shirt[j];
                     shirt[j] = tmp;
                 }
             }           
             else if(strcmp(shirt[i].color, shirt[j].color) == 0){
-                if(shirt[i].size > shirt[j].size){
+                if(shirt[i].size < shirt[j].size){
                     Shirts tmp = shirt[i];
                     shirt[i] = shirt[j];
                     shirt[j] = tmp;
                 }
                 else if(shirt[i].size == shirt[j].size){
-                    if(strcmp(shirt[i].name, shirt[j].name) < 0){
+                    if(strcmp(shirt[i].name, shirt[j].name) > 0){
                         Shirts tmp = shirt[i];
                         shirt[i] = shirt[j];
                         shirt[j] = tmp;
